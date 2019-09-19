@@ -1,0 +1,17 @@
+<mat-drawer-container class="container">
+  <mat-drawer mode="side" opened>
+    <div *ngFor="let x of menuItems">
+      <mat-list >
+          <a routerLink="{{x.route}}" >
+              <mat-list-item>
+                  <span>{{x.name}}</span>
+              </mat-list-item>
+          </a>
+      </mat-list>
+      <mat-divider></mat-divider>
+  </div>
+  </mat-drawer>
+  <mat-drawer-content>
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>

@@ -1,0 +1,29 @@
+<mat-card>
+    <mat-card-title>
+      Edit Contact for Id: {{data.id}}
+    </mat-card-title>
+      <form [formGroup]="Form" (ngSubmit)="onSubmit()" class="row">
+          <div class="inputFields">
+              <mat-form-field class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                  <input matInput formControlName=name>
+                  <mat-placeholder>Name</mat-placeholder>
+                  <mat-error>required</mat-error>
+              </mat-form-field>
+              <mat-form-field class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                  <input matInput formControlName=phone>
+                  <mat-placeholder>Phone</mat-placeholder>
+                  <mat-error>required</mat-error>
+              </mat-form-field>
+  
+              <mat-form-field class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                  <input matInput formControlName=email>
+                  <mat-placeholder>Email</mat-placeholder>
+                  <mat-error>required</mat-error>
+              </mat-form-field>
+          </div>
+          <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12" style="text-align:center">
+              <button mat-button class="button" type="submit">Update</button>
+          </div>
+          </form>
+  </mat-card>
+  
